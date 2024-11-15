@@ -27,8 +27,8 @@ class RawEdgeTTSVoice:
         communicate = Communicate(
             text, 
             voice=self.voice, 
-            rate=f"{self.base_options.speed + options.speed:+d}%",
-            volume=f"{self.base_options.volume + options.volume:+d}%"
+            rate=f"{round(self.base_options.speed + options.speed):+d}%",
+            volume=f"{round(self.base_options.volume + options.volume):+d}%"
         )
         output_file = AUDIO_TMP / f"edgetts_{generate_unique_name()}.wav"
         try:

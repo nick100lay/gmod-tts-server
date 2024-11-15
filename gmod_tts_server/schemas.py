@@ -5,8 +5,8 @@ from pydantic import BaseModel
 
 
 class TTSOptions(BaseModel):
-    speed: int = 0
-    volume: int = 0
+    speed: float = 0
+    volume: float = 0
 
 
 class TTSRequestSchema(BaseModel):
