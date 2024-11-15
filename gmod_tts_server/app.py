@@ -45,7 +45,7 @@ async def generate_audio(data: TTSRequestSchema) -> tuple[bytes, float]:
     return audio, duration
 
 
-@app.post("/tss",
+@app.post("/tts",
     responses={
         400: { "description": "Couldn't synthesize the text to speech (invalid text, language or voice)" },
         401: { "description": "Unauthorized (invalid secret key)" },
